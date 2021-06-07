@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-function Main({ image }){
+function Main(){
     return(
         <div>
             <main>

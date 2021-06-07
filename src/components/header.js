@@ -1,14 +1,19 @@
 import React from "react";
+import Hamburger from "./Hamburger";
 
 function Header(){
 
 
     return(
-      <div>
+      <header>
+          <div className={"logo"}>
 
+                  <h1>IDRUNK</h1>
 
+          </div>
 
-      </div>
+          <Hamburger/>
+      </header>
     );
 }
 
