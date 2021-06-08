@@ -1,5 +1,5 @@
 import {NavLink, Link} from "react-router-dom";
-import React from "react";
+import React, { useRef } from "react";
 import {set, useForm} from "react-hook-form";
 import Input from "../components/Input";
 
@@ -55,7 +55,7 @@ function Subscribe(){
             <Input
                 name="password"
                 labelId="passwordId"
-                type="text"
+                type="password"
                 placeholder="Wachtwoord"
                 required={true}
                 register={register}
@@ -76,7 +76,28 @@ function Subscribe(){
                 patternError="Wachtwoord voldoet niet aan de eisen"
             />
 
+            <Input
+                name="age"
+                labelId="ageCheck"
+                type="number"
+                placeholder="18"
+                required={true}
+                register={register}
+                errors={errors}
+                maxLength={3}
+                maxLengthError="de leeftijd mag niet meer dan 3 cijfers bevatten"
+            />
 
+            <Input
+                name="straat"
+                labelId="straatId"
+                type="text"
+                placeholder="uw straatnaam hier.."
+                register={register}
+                errors={errors}
+                minLength={2}
+                minLengthError="De straatnaam moet minimaal 3 leestekens bevatten"
+            />
             {/*<label htmlFor="voornaam" id="firstNameId">Voornaam*/}
             {/*    <input type="text" placeholder="Voornaam..." name="voornaam" id="voornaam" {...register("voornaam", {required: true, max: 25})}/>*/}
             {/*    {errors.voornaam && errors.voornaam.type === "required" && <span className="errorMessage">Dit veld is verplicht</span>}*/}
@@ -131,4 +152,4 @@ function Subscribe(){
 )
 }
 
-export default Subscribe;
+export default Subscribe

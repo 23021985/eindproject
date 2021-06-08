@@ -23,6 +23,7 @@ function Input({labelId, name, type, placeholder, errors, register, required,  m
             {errors[name] && errors[name].type === "minLength" && <span className="errorMessage">{minLengthError}</span>}
             {errors[name] && errors[name].type === "maxLength" && <span className="errorMessage">{maxLengthError}</span>}
             {errors[name] && errors[name].type === "pattern" && <span className="errorMessage">{patternError}</span>}
+
         </label>
     )
 }
