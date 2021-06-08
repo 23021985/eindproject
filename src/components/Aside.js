@@ -2,7 +2,7 @@ import React from "react";
 
 function Aside(){
     return(
-        <div>
+
             <aside>
                 <p>
                     Over IDRUNK
@@ -22,7 +22,7 @@ function Aside(){
                     Schrijf je dus snel in, kom langs, geniet en proost op een goede gezondheid!
                 </p>
             </aside>
-        </div>
+
     );
 }
 

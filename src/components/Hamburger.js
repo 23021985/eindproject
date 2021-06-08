@@ -14,14 +14,14 @@ function Hamburger(){
 
             <nav className="menu1">
                 <a className="link1" href="">Inloggen</a>
-                <a className="link1" href="">Bar's</a>
-                <a className="link1" href="">Over ons</a>
+                <a className="link1" href="">Locaties</a>
+                <a className="link1" href="">Socials</a>
                 <a className="link1" href="">Blog</a>
-                <a className="lin1 kbutton-nav" href="">Contact</a>
+                <a className="link1 kbutton-nav" href="">Contact</a>
             </nav>
         </nav>
  </section>
     )
 }
-
+//U can find the CSS in Header.css
 export default Hamburger;

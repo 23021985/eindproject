@@ -1,5 +1,6 @@
 import React from "react";
 import Hamburger from "./Hamburger";
+import "./Header.css"
 
 function Header(){
 

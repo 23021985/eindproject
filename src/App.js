@@ -1,40 +1,55 @@
 import logo from './logo.svg';
 import React, {useState} from "react";
+import {set, useForm} from "react-hook-form";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link, NavLink,
+}
+
+from 'react-router-dom';
 import './App.css';
 import Header from "./components/header";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
 import Aside from "./components/Aside";
-// import achtergrond from "./assets/achtergrond.jpg"
-import Navbar from "./components/Navbar";
-import Hamburger from "./components/Hamburger";
-
+import HomePage from "./pages/HomePage";
+import Subscribe from "./pages/Subscribe";
+import Login from "./pages/Login";
+import Locaties from "./pages/Locaties";
+import Input from "./components/Input";
 
 function App() {
   return (
 
-      <>
+      <Router>
+          <Header/>
+                <div className={"container1"}>
+                    <Aside/>
 
-              <Header/>
+                            <Switch>
+                                <Route path="/locaties">
+                                    <Locaties/>
+                                </Route>
 
-<div className={"container1"}>
-<Aside/>
+                                <Route path="/login">
+                                    <Login/>
+                                </Route>
 
+                                <Route path="/subscribe">
+                                    <Subscribe/>
+                                </Route>
 
-    <Main/>
+                                <Route path="/">
+                                    <HomePage/>
+                                </Route>
 
+                            </Switch>
 
-
-</div>
-
-
-
-
-        <Footer/>
-
-
-
-      </>
+                </div>
+            <Footer/>
+      </Router>
 
   );
 }
